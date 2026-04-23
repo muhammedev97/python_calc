@@ -1,5 +1,5 @@
 import tkinter as tk
-
+import functions as f
 window = tk.Tk()
 window.title("Zaur & Muhammed Kalkulyator")
 window.geometry("300x400")
@@ -28,15 +28,7 @@ def backspace():
 
 def calculate():
     global expression_args
-    # try:
-    #     result = str(eval(expression))
-    #     val.set(result)
-    #     expression = result
-    # except:
-    #     val.set("Error")
-    #     expression = ""
-
-    print(expression_args)
+    f.calculate(expression_args)
 
 input_field = tk.Entry(window, textvariable=val, justify="right", font=("Arial", 18, "bold"))
 input_field.config(state="readonly")
