@@ -7,12 +7,13 @@ window.resizable(False, False)
 
 val = tk.StringVar()
 expression = ""
+expression_args = []
 
 def press(key):
     global expression
     expression += str(key)
     val.set(expression)
-
+    expression_args.append(key)
 def clear():
     global expression
     expression = ""
@@ -24,14 +25,16 @@ def backspace():
     val.set(expression)
 
 def calculate():
-    global expression
-    try:
-        result = str(eval(expression))
-        val.set(result)
-        expression = result
-    except:
-        val.set("Error")
-        expression = ""
+    global expression_args
+    # try:
+    #     result = str(eval(expression))
+    #     val.set(result)
+    #     expression = result
+    # except:
+    #     val.set("Error")
+    #     expression = ""
+
+    print(expression_args)
 
 input_field = tk.Entry(window, textvariable=val, justify="right", font=("Arial", 18, "bold"))
 input_field.config(state="readonly")
