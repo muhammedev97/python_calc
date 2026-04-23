@@ -8,7 +8,6 @@ window.resizable(False, False)
 val = tk.StringVar()
 expression = ""
 
-# ---------------- FUNCTIONS ----------------
 def press(key):
     global expression
     expression += str(key)
@@ -34,19 +33,16 @@ def calculate():
         val.set("Error")
         expression = ""
 
-# ---------------- INPUT ----------------
 input_field = tk.Entry(window, textvariable=val, justify="right", font=("Arial", 18, "bold"))
 input_field.config(state="readonly")
 input_field.grid(row=0, column=0, columnspan=4, sticky="nsew", padx=10, pady=10)
 
-# ---------------- GRID CONFIG ----------------
 for i in range(4):
     window.grid_columnconfigure(i, weight=1)
 
-for i in range(6):  # 0-5 arası satırlar (eşit yükseklik)
+for i in range(6):  
     window.rowconfigure(i, weight=1, uniform="row")
 
-# ---------------- BUTTONS ----------------
 buttons = [
     ("%", 1, 0), ("CE", 1, 1), ("C", 1, 2), ("⌫", 1, 3),
     ("7", 2, 0), ("8", 2, 1), ("9", 2, 2), ("*", 2, 3),
@@ -72,9 +68,7 @@ for (text, row, col) in buttons:
     tk.Button(window, text=text, command=action, font=("Arial", 14))\
         .grid(row=row, column=col, sticky="nsew", padx=2, pady=2)
 
-# "=" butonunu geniş yap
 tk.Button(window, text="=", command=calculate, font=("Arial", 14))\
     .grid(row=5, column=2, columnspan=2, sticky="nsew", padx=2, pady=2)
 
-# ---------------- RUN ----------------
 window.mainloop()
