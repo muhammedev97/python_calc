@@ -16,3 +16,5 @@ Zaur sene xeber verenden sonra
 git pull
 
 edib onun etdiklerini de oz kompuna cekirsen
+
+Birlikde ishlemek ucun bunun unutma
