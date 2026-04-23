@@ -18,11 +18,13 @@ def clear():
     global expression
     expression = ""
     val.set("")
+    expression_args.clear()
 
 def backspace():
     global expression
     expression = expression[:-1]
     val.set(expression)
+    expression_args.pop()
 
 def calculate():
     global expression_args
