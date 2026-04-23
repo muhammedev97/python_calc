@@ -3,6 +3,7 @@ proyektde ishleyirsen sonra githuba atmaq ucun
 git status # bu sene statusu gosterecek
 git add .
 git commit -am "mesaj"
+git push
 
 
 sonra Zaura deyirsen ki gonderdim.
