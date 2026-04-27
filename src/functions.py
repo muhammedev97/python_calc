@@ -1,4 +1,4 @@
-def sum_(a, b):
+def sum(a, b):
     return a + b
 
 def sub(a, b):
@@ -37,7 +37,7 @@ def sort(args):
             right = float(args[i + 1])
 
             if args[i] == "+":
-                result = sum_(left, right)
+                result = sum(left, right)
             else:
                 result = sub(left, right)
 
