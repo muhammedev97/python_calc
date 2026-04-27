@@ -21,10 +21,11 @@ def clear():
     expression_args.clear()
 
 def backspace():
-    global expression
-    expression = expression[:-1]
-    val.set(expression)
-    expression_args.pop()
+    if len(expression_args) >= 1:
+        global expression
+        expression = expression[:-1]    
+        val.set(expression)
+        expression_args.pop()
 
 def calculate():
     global expression_args
