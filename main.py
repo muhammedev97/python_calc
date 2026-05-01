@@ -139,9 +139,9 @@ for (yazi, setir, sutun) in duymeler:  # Hər bir düymə üçün dövr
     tk.Button(pencere, text=yazi, command=komanda, font=("Arial", 14)).grid(row=setir, column=sutun, sticky="nsew", padx=2, pady=2)
 
 for i in range(4):  # Sütunları nizamlamaq üçün dövr
-    pencere.grid_columnconfigure(i, weight=1)  # Hər sütuna eyni çəki veririk
+    pencere.grid_columnconfigure(i, weight=1)  # Hər sütuna eyni weight veririk
 
 for i in range(6):  # Sətirləri nizamlamaq üçün dövr
-    pencere.grid_rowconfigure(i, weight=1)  # Hər sətirə eyni çəki veririk
+    pencere.grid_rowconfigure(i, weight=1)  # Hər sətirə eyni weight veririk
 
 pencere.mainloop()  # Proqramı işlək vəziyyətdə saxlayırıq
